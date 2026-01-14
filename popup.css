@@ -1,0 +1,142 @@
+/* Layout */
+body {
+  width: 400px;
+  margin: 0;
+  padding: 12px 10px 14px;
+  font-family: "Inter", Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+  color: #1f2937;
+}
+
+/* Title styling if you add one */
+h1, h2 {
+  margin: 6px 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Grid */
+#grid {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 6px;
+}
+
+/* Cells */
+.cell {
+  border-radius: 14px;
+  padding: 14px 8px;
+  min-height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.04);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: 
+    transform 0.08s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Hover + Active feedback */
+.cell:hover {
+  background: #f3f6ff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.cell:active {
+  transform: scale(0.97);
+}
+
+/* Checked state (task done) */
+.done {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #04523c;
+  font-weight: 600;
+}
+
+/* Strong bingo line highlight */
+.bingo-line {
+  background: #bbf7d0 !important; /* This will override the .done color */
+  border-color: #4ade80 !important; /* As well as this */
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+/* Stats text */
+#stats {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+/* Number input */
+input {
+  width: 42px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 2px rgba(129,140,248,0.25);
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin-top: 8px;
+  border-radius: 999px;
+
+  border: none;
+  cursor: pointer;
+
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.15s ease, transform 0.08s ease;
+}
+
+button:hover {
+  background: #e0e7ff;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Specific button groups */
+#reset {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+#reset:hover {
+  background: #fecaca;
+}
+
+#shuffle {
+  background: #e0f2fe;
+  color: #065986;
+}
+
+#shuffle:hover {
+  background: #bae6fd;
+}

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Task Bingo",
+  "version": "1.0",
+  "description": "A bingo matrix for daily tasks",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Task Bingo"
+  },
+  "permissions": ["storage"]
+}
