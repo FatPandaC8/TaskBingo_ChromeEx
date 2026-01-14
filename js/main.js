@@ -14,6 +14,10 @@ const generateButton    = document.getElementById("generate");
 const resetButton       = document.getElementById("reset");
 const shuffleButton     = document.getElementById("shuffle");
 
+const settingsBtn = document.getElementById("settingsBtn");
+const settingsPanel = document.getElementById("settingsPanel");
+const darkModeToggle = document.getElementById("darkModeToggle");
+
 const progressText      = document.getElementById("progressText");
 const progressPercent   = document.getElementById("progressPercent");
 
@@ -47,6 +51,18 @@ resetButton.addEventListener("click", () => {
 shuffleButton.addEventListener("click", () => {
   shuffleTasks(tasks, done);
   stateChanged();
+});
+
+settingsBtn.addEventListener("click", () => {
+  settingsPanel.classList.toggle("hidden");
+});
+
+darkModeToggle.addEventListener("change", () => {
+  const enabled = darkModeToggle.checked;
+
+  document.body.classList.toggle("dark", enabled);
+
+  chrome.storage.sync.set({ darkMode: enabled });
 });
 
 // INITIAL LOAD

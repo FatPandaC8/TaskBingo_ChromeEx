@@ -25,3 +25,10 @@ export function createEmptyTasks(n) {
 export function createEmptyDone(n) {
   return Array(n * n).fill(false);
 }
+
+chrome.storage.sync.get(["darkMode"], data => {
+  if (data.darkMode) {
+    document.body.classList.add("dark");
+    darkModeToggle.checked = true;
+  }
+});

@@ -23,6 +23,77 @@ h1, h2 {
   margin: 10px 0 6px;
 }
 
+#topbar {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  position: absolute;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.right-controls button {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+}
+
+#settingsPanel {
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+body.dark {
+  background: linear-gradient(180deg, #0b1220, #111827);
+  color: #e5e7eb;
+}
+
+body.dark .cell {
+  border-color: #374151;
+  background: #1f2937;
+  color: white;
+}
+
+body.dark button {
+  background: #1f2937;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+body.dark #settingsPanel {
+  background: #111827;
+  border-color: #1f2937;
+}
+
+body.dark .done {
+  background: #064e3b;        /* deep emerald */
+  border-color: #10b981;      /* emerald glow */
+  color: #d1fae5;             /* pale mint text */
+  font-weight: 600;
+}
+
+body.dark .bingo-line {
+  background: #065f46 !important;
+  border-color: #34d399 !important;
+  color: #ecfdf5;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
 /* Cells */
 .cell {
   border-radius: 14px;
